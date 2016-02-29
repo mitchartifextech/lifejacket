@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html class="no-js" lang="en">
 <!doctype html>
 <html class="no-js" lang="en">
@@ -10,24 +10,23 @@
     <link rel="stylesheet" href="/css/admin.min.css">
   </head>
 <body>
-	<div class="row header sticky">
-		<div class="column large-12">
-			<a class="logo" href="/"></a>
-			<a href="/admin-logout" class="button">Log Out</a>
-		</div>
-	</div>
-
     [[__content]]
-
     <script src="/js/admin.min.js"></script>
     <script src="/tinymce/tinymce.min.js"></script>
-	<script>
+    <script>
         $(document).foundation();
-		
 		$(window).load(function () {
+			$('.tabs-title:first-child').click();
 			$('.tabs-content, #adminTabs').addClass('loaded');
+			$('.off-canvas .tabs-title a').click(function () {
+			    $('.off-canvas-content .open-menu').click();
+			    
+			});
 		});
     </script>
 
+
 </body>
+
+
 </html>
