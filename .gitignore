@@ -1,0 +1,6 @@
+tmp/**
+public/img/uploads/**
+node_modules
+.sass-cache
+bower_components
+.idea/**

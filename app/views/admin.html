@@ -1,0 +1,36 @@
+[[layout=admin]]
+
+
+<form action="" method="post" enctype="multipart/form-data">
+    <div class="row content-row">
+
+        <div class="medium-3 columns sidebar">
+            <ul class="tabs vertical annimation-wrapper " id="adminTabs" data-tabs >
+                [[__nav_items]]
+                <li class="tabs-title"><a href="#panel_settings">Settings</a></li>
+            </ul>
+        </div>
+
+        <div class="medium-9 columns content" >
+            <div class="tabs-content vertical" data-tabs-content="adminTabs">
+               
+
+                [[__page_strings]]
+                <div class="tabs-panel" id="panel_settings">
+                    [[__settings]]
+                </div>
+                <input type="submit" class="button" value="Save Changes" />
+            </div>
+
+           
+        </div>
+
+    </div>
+
+    <input type="hidden" name="csrf" value="[[__csrf]]" />
+</form>
+<script>
+    $(window).load(function () {
+        $('.tabs li:first-child a').click();
+    });
+</script>
