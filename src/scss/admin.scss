@@ -9,7 +9,6 @@
     -webkit-transition: $transition;
     transition:         $transition;
 }
-
 .animate-in{
     @include transition(all, 500ms, ease);
     opacity: 0;
